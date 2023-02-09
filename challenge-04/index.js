@@ -1,10 +1,10 @@
 class Book {
-  constructor (title, author, ISBN, NumCopies, edition) {
+  constructor(title, author, ISBN, NumCopies, edition) {
     this.title = title;
     this.author = author;
     this.ISBN = ISBN;
     this.NumCopies = NumCopies;
-    this.edition= edition
+    this.edition = edition;
   }
   getAvailbility() {
     if ((this.NumCopies = 0)) {
@@ -15,10 +15,10 @@ class Book {
       console.log("in stock");
     }
   }
-
 }
-class TechnicalBook extends Book{
-    getEdition(){
-        console.log(`the current edition of this book is ${this.edition}`)
-    }
+class TechnicalBook extends Book {
+  getEdition() {
+    super(edition);
+    console.log(`the current edition of this book is ${this.edition}`);
+  }
 }
