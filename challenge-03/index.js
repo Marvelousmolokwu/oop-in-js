@@ -8,4 +8,4 @@ const dishes = [
     vegetarian: false,
   },
 ];
-const menu = dishes.name.filter(i.name)
+const menu = dishes.filter((i) => i.dishes.vegetarian === true);

@@ -9,6 +9,6 @@ this.rating = rating
 
     }
   movie.prototype.getReview = function(){
-    console.log(`${this.title} ${this.director} ${this.genre} ${this.release} ${this.release}`)
+    console.log(`movie by${this.title}, directed by ${this.director},has a genre ${this.genre}, was released ${this.release}. `)
   }
 }
