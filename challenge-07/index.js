@@ -1,13 +1,17 @@
-const classroom = {
-  hasTeachingAssistant: true,
-  classlist: ["matilda", "john", "mike", "bose"],
-};
+console.log(
+  getStudents({
+    hasTeachingAssistant: true,
+    classlist: ["matilda", "john", "mike", "bose"],
+  })
+);
 
 function getStudents(classroom) {
-  if (classroom.hasTeachingAssistant === true) {
-    return;
+  let { hasTeachingAssistant, classlist } = classroom;
+  let teacher, teachingStudent, students;
+  if (hasTeachingAssistant) {
+    [teacher, teachingStudent, ...students] = classlist;
   } else {
-    const list = classroom.classlist.slice(1, 4);
-    console.log(list);
+    [teacher, ...students] = classlist;
   }
+  return students;
 }

@@ -1,8 +1,12 @@
-class User {
-    constructor(username, password, age){
+const username = Symbol("username");
+const password = Symbol("password");
 
-    this.username = username;
-    this.age =age;
-    this.password = password;
-}
-}
+const user = {
+  [username]: "marv",
+  [password]: "password",
+  age: 1,
+};
+
+console.log(`Name: ${user.username}`);
+console.log(`Password: ${user.password}`);
+console.log(`Age: ${user.age}`);
